@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Brian Tomlinson
+  description: Install Fedora packages
+
+  license: GPLv3
+
+  min_ansible_version: 2.9
+  platforms:
+    - name: Fedora
+      versions:
+      - 34
+
+  galaxy_tags:
+    - fedora
+
+dependencies: []
