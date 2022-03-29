@@ -7,6 +7,7 @@ LABEL maintainer.name="Brian Tomlinson" \
       description="Ansible in a container"
 
 RUN microdnf update -y && \
+    microdnf upgrade -y && \
     microdnf install python3-pip python3-cryptography git -y && \
     microdnf clean all -y && \
     /usr/bin/pip3 install ansible
