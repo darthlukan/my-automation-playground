@@ -1,0 +1,8 @@
+---
+- name: "{{ 'Install' if state == 'present' else 'Remove'}} base_pkgs"
+  ansible.builtin.dnf:
+    update_cache: "{{ 'yes' if state == 'present' else 'no' }}"
+    state: "{{ state }}"
+    name: "{{ item }}"
+  loop: "{{ base_pkgs }}"
+...
