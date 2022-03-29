@@ -1,0 +1,8 @@
+- name: Setup Fedora machine
+  hosts: fedora
+  become: yes
+  become_method: su
+  tasks:
+    - name: Install Packages
+      import_role:
+        name: fedora_pkgs
