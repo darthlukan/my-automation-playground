@@ -3,6 +3,5 @@
   ansible.builtin.dnf:
     update_cache: "{{ 'yes' if state == 'present' else 'no' }}"
     state: "{{ state }}"
-    name: "{{ item }}"
-  loop: "{{ base_pkgs }}"
+    name: "{{ base_pkgs }}"
 ...
